@@ -26,7 +26,7 @@ Desenvolvida com HTML, CSS, JavaScript, a aplicação utiliza a API OpenWeatherM
 - Google Fonts (Open Sans): Tipografia
 - JavaScript Puro (Vanilla JS): Manipulação de DOM, eventos, requisições API e atualização dinâmica da interface
 
-###APIs
+### APIs
 - OpenWeatherMap API: Consulta de dados meteorológicos
 - Unsplash API: Imagens de fundo aleatórias
 
