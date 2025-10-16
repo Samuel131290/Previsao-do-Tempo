@@ -13,7 +13,7 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("https://source.unsplash.com/1600x900/?landscape");
+    background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80");
     background-size: cover;
 }
 
@@ -68,7 +68,15 @@ body
     font-weight: 300;
 }
 
-.temperature
+.temp-min
+{
+    margin-top: 10px;
+    color: #ffff;
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.temp-max
 {
     margin-top: 10px;
     color: #ffff;
