@@ -1,10 +1,21 @@
-let key = "cebcd482eda57fa9a6714c1c2ba91885"
+let key = "625f1a9d5a7c8c9ced210d954860c40e"
+const accessKey = "RBfRcWXG5POwlvRZIuaQKLxqSc9oR9nI-wpTpWMfGJg";
+
+fetch(`https://api.unsplash.com/photos/random?query=landscape&client_id=${accessKey}`)
+  .then(res => res.json())
+  .then(data => {
+    document.body.style.backgroundImage = `url(${data.urls.full})`;
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+  })
+  .catch(err => console.error(err));
 
 function screenData(data)
 {
     console.log(data)
-    document.querySelector(".city-title").innerHTML = "Temperatura em " + data.name //Changes temperature according to the API
-    document.querySelector(".temperature").innerHTML = Math.floor(data.main.temp) + "°C" //Changes wheather according to the city
+    document.querySelector(".city-title").innerHTML = "Temperatura em " + data.name 
+    document.querySelector(".temp-min").innerHTML = "Atual: " + Math.floor(data.main.temp_min) + "°C"; // Correção aqui
+    document.querySelector(".temp-max").innerHTML = "Máxima: " + Math.floor(data.main.temp_max) + "°C"; // Correção aqui
     document.querySelector(".img-prev").src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + ".png" //Changes wheather icon
     document.querySelector(".prev").innerHTML = data.weather[0].description //Changes wheather description
     document.querySelector(".moisture").innerHTML = "Umidade do ar: " + data.main.humidity + "%" //Changes the air humidity
@@ -29,3 +40,4 @@ function buttonClick()
     let city = document.querySelector(".input-city").value
     searchCity(city) //Search the city by clicking on search
 }
+
